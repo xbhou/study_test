@@ -19,6 +19,8 @@ public class Singleton2 {
     /**
      * 同步锁synchronized对getInstance方法加锁，所有线程获取
      * 实例都会被锁限制。效率低
+     * 真正需要线程安全处理的是创建对象的时候，故而主要对该方法加锁就好
+     * 具体可参见Singleton3  Singleton4 ...
      * @return
      */
     public synchronized Singleton2 getInstance(){
