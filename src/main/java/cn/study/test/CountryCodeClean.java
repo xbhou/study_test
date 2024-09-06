@@ -39,20 +39,25 @@ public class CountryCodeClean {
                 JSONArray jsonArray = JSONArray.parseArray(line);
                 Set<String> nameSet = TOP_COUNTRY_CONFIG.keySet();
                 List<Map<String,Object>> configMapList = new ArrayList<>();
+                StringBuilder stringBuilder = new StringBuilder();
                 for (int i = 0; i < jsonArray.size(); i++) {
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
                     String geoCode = jsonObject.getString("geoCode");
                     String zhName = jsonObject.getString("zhName");
                     Map<String, Object> config = new HashMap<>();
                     config.put("code", geoCode);
-                    config.put("name", zhName);
+                    stringBuilder.append(geoCode);
 
                     if (nameSet.contains(zhName)){
+                        stringBuilder.append(":").append(TOP_COUNTRY_CONFIG.get(zhName));
                         config.put("order", TOP_COUNTRY_CONFIG.get(zhName));
                     }
+                    stringBuilder.append(";");
                     configMapList.add(config);
                 }
                 System.out.println(JSON.toJSONString(configMapList));
+                System.out.println(stringBuilder);
+                System.out.println(stringBuilder.toString().length());
             }
         } catch (Exception e) {
             e.printStackTrace();
