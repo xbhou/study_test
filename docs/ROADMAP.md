@@ -37,7 +37,7 @@
 
 ## Phase 5 — Distributed Systems
 
-- [ ] Idempotency
+- [x] Idempotency
 - [x] Retry, exponential backoff, jitter, and deadline budget
 - [ ] Distributed lock
 - [ ] Rate limiting
