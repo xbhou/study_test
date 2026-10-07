@@ -15,6 +15,18 @@ Focus:
 - result aggregation
 - best-result selection
 
+### CompletableFuture Deadline & Cancellation
+
+Path: `completable-future-deadline/`
+
+Focus:
+
+- overall request deadlines
+- exception isolation with `handle`
+- partial results
+- cancellation semantics
+- why cancelling a CompletableFuture does not guarantee the underlying work stops
+
 ### ThreadPoolExecutor Behavior
 
 Path: `thread-pool-behavior/`
