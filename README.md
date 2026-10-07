@@ -61,6 +61,14 @@ labs/concurrency/thread-pool-sizing
 
 Compares CPU-bound and I/O-bound workloads across several pool sizes and shows why thread counts should be measured rather than chosen from a single formula.
 
+### Retry + Backoff + Jitter + Deadline
+
+```text
+labs/distributed-system/retry-backoff-deadline
+```
+
+Demonstrates retry classification, exponential backoff, jitter, deadline budgeting, and retry amplification risks.
+
 ## Existing Topics
 
 The legacy `src/` tree contains experiments covering:
