@@ -1,14 +1,112 @@
 # Java Lab
 
-A personal Java engineering lab for small, runnable experiments and backend system design practice.
+> 中文 | English
 
-## What this repository is for
+## 中文
 
-This repository turns technical questions into executable experiments.
+这是一个用于 **Java 工程实践、并发编程与后端系统设计** 的个人实验仓库。
 
-The goal is not to collect snippets. Each new lab should answer a concrete question, be easy to run, and document what was learned.
+这里的目标不是收集零散代码片段，而是把技术问题变成**可运行、可观察、可解释**的实验。
 
-## Repository Structure
+### 仓库结构
+
+```text
+java-lab
+├── src/                         # 历史 Java 学习代码
+├── labs/                        # 新的独立实验
+│   ├── java-core/
+│   ├── concurrency/
+│   ├── jvm/
+│   ├── spring/
+│   ├── mysql/
+│   ├── redis/
+│   ├── kafka/
+│   ├── grpc/
+│   └── distributed-system/
+└── docs/
+    └── ROADMAP.md
+```
+
+### 现代实验
+
+#### CompletableFuture 并行报价聚合
+
+```text
+labs/concurrency/completable-future-quote
+```
+
+演示并发请求多个 Provider、单 Provider 超时隔离、结果归集以及最优报价选择。
+
+#### CompletableFuture Deadline 与取消
+
+```text
+labs/concurrency/completable-future-deadline
+```
+
+演示整体请求 Deadline、异常隔离、部分结果返回，以及“取消 Future”和“真正停止底层任务”之间的区别。
+
+#### ThreadPoolExecutor 行为
+
+```text
+labs/concurrency/thread-pool-behavior
+```
+
+演示 core thread、bounded queue、maximumPoolSize、线程池饱和与拒绝策略。
+
+#### 线程池容量设计
+
+```text
+labs/concurrency/thread-pool-sizing
+```
+
+比较 CPU-bound 和 I/O-bound 任务在不同线程数下的表现，说明为什么线程池大小应该通过测量确定，而不是死背公式。
+
+#### Retry + Backoff + Jitter + Deadline
+
+```text
+labs/distributed-system/retry-backoff-deadline
+```
+
+演示可重试异常分类、指数退避、Jitter、Deadline Budget，以及多层重试造成的流量放大风险。
+
+### 历史代码
+
+根目录的 `src/` 保留了早期学习实验，例如：
+
+- 算法
+- 反射
+- ClassLoader
+- 单例模式
+- synchronized / volatile
+- 线程池
+- 日期时间 API
+- JavaScript Engine
+
+这些代码不会一次性机械迁移。后续复习某个主题时，再把值得保留的内容重写成新的独立 Lab。
+
+### Lab 规范
+
+1. 一个 Lab 只回答一个明确问题。
+2. 优先写可运行实验，而不是复制笔记。
+3. 每个 Lab 应能独立理解和运行。
+4. README 至少包含：问题、设计、运行方式、观察结果和工程意义。
+5. 关键行为尽量通过测试或可重复实验验证。
+6. 禁止提交公司代码、内部地址、凭证、生产数据或敏感配置。
+7. README 默认使用中英双语。
+
+### 学习路线
+
+参见 [docs/ROADMAP.md](docs/ROADMAP.md)。
+
+---
+
+## English
+
+This is a personal lab for **Java engineering, concurrency, and backend system design**.
+
+The goal is not to collect snippets. The repository turns technical questions into **runnable, observable, and explainable experiments**.
+
+### Repository Structure
 
 ```text
 java-lab
@@ -27,9 +125,9 @@ java-lab
     └── ROADMAP.md
 ```
 
-## Modern Labs
+### Modern Labs
 
-### CompletableFuture Quote Aggregator
+#### CompletableFuture Quote Aggregator
 
 ```text
 labs/concurrency/completable-future-quote
@@ -37,7 +135,7 @@ labs/concurrency/completable-future-quote
 
 Demonstrates concurrent provider requests, timeout isolation, result aggregation, and best-quote selection.
 
-### CompletableFuture Deadline & Cancellation
+#### CompletableFuture Deadline & Cancellation
 
 ```text
 labs/concurrency/completable-future-deadline
@@ -45,7 +143,7 @@ labs/concurrency/completable-future-deadline
 
 Demonstrates end-to-end deadlines, failure isolation, partial results, and the difference between cancelling a future and actually stopping the underlying work.
 
-### ThreadPoolExecutor Behavior
+#### ThreadPoolExecutor Behavior
 
 ```text
 labs/concurrency/thread-pool-behavior
@@ -53,7 +151,7 @@ labs/concurrency/thread-pool-behavior
 
 Demonstrates core threads, bounded queues, maximum pool growth, saturation, and rejection behavior.
 
-### Thread Pool Sizing
+#### Thread Pool Sizing
 
 ```text
 labs/concurrency/thread-pool-sizing
@@ -61,7 +159,7 @@ labs/concurrency/thread-pool-sizing
 
 Compares CPU-bound and I/O-bound workloads across several pool sizes and shows why thread counts should be measured rather than chosen from a single formula.
 
-### Retry + Backoff + Jitter + Deadline
+#### Retry + Backoff + Jitter + Deadline
 
 ```text
 labs/distributed-system/retry-backoff-deadline
@@ -69,7 +167,7 @@ labs/distributed-system/retry-backoff-deadline
 
 Demonstrates retry classification, exponential backoff, jitter, deadline budgeting, and retry amplification risks.
 
-## Existing Topics
+### Legacy Topics
 
 The legacy `src/` tree contains experiments covering:
 
@@ -82,17 +180,18 @@ The legacy `src/` tree contains experiments covering:
 - date and time APIs
 - JavaScript engine experiments
 
-These examples are kept as historical learning assets and will be cleaned up gradually instead of being moved all at once.
+These examples are preserved as historical learning assets. They will be rewritten into modern labs only when a topic is revisited.
 
-## Lab Rules
+### Lab Rules
 
 1. One lab, one concrete technical question.
-2. Prefer runnable examples over copied notes.
+2. Prefer runnable experiments over copied notes.
 3. Keep each lab small enough to understand independently.
-4. Include a short README with problem, design, run steps, and observations.
-5. Add tests when behavior is important.
-6. Never commit company code, credentials, internal endpoints, or production data.
+4. Each README should explain the problem, design, run steps, observations, and engineering implications.
+5. Validate important behavior with tests or reproducible experiments.
+6. Never commit company code, credentials, internal endpoints, production data, or sensitive configuration.
+7. README files are bilingual by default.
 
-## Roadmap
+### Roadmap
 
 See [docs/ROADMAP.md](docs/ROADMAP.md).
