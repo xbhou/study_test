@@ -14,7 +14,8 @@ import java.util.concurrent.TimeUnit;
 public class ThreadPoolSizingExperiment {
 
     private static final int TASK_COUNT = 24;
-    private static final Duration TASK_DURATION = Duration.ofMillis(80);
+    private static final int CPU_ITERATIONS = 40_000_000;
+    private static final Duration IO_WAIT = Duration.ofMillis(80);
 
     private static volatile long blackhole;
 
@@ -59,7 +60,7 @@ public class ThreadPoolSizingExperiment {
             List<Callable<Void>> tasks = new ArrayList<>();
             for (int i = 0; i < TASK_COUNT; i++) {
                 tasks.add(() -> {
-                    workload.run(TASK_DURATION);
+                    workload.run();
                     return null;
                 });
             }
@@ -82,11 +83,10 @@ public class ThreadPoolSizingExperiment {
     private enum Workload {
         CPU_BOUND {
             @Override
-            void run(Duration duration) {
-                long deadline = System.nanoTime() + duration.toNanos();
+            void run() {
                 long value = 0x9E3779B97F4A7C15L;
 
-                while (System.nanoTime() < deadline) {
+                for (int i = 0; i < CPU_ITERATIONS; i++) {
                     value ^= value << 13;
                     value ^= value >>> 7;
                     value ^= value << 17;
@@ -97,12 +97,12 @@ public class ThreadPoolSizingExperiment {
         },
         IO_BOUND {
             @Override
-            void run(Duration duration) throws InterruptedException {
-                Thread.sleep(duration.toMillis());
+            void run() throws InterruptedException {
+                Thread.sleep(IO_WAIT.toMillis());
             }
         };
 
-        abstract void run(Duration duration) throws Exception;
+        abstract void run() throws Exception;
     }
 
     private record Result(int taskCount, long elapsedNanos) {
