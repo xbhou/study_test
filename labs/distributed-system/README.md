@@ -6,6 +6,20 @@
 
 ### Labs
 
+#### Idempotency / 幂等
+
+路径：`idempotency/`
+
+重点：
+
+- Idempotency Key
+- Request Fingerprint
+- PROCESSING / SUCCESS 状态
+- 请求成功但响应丢失后的安全重试
+- 并发重复请求
+- 同 Key 不同参数冲突
+- 为什么幂等不等于 Exactly Once
+
 #### Retry + Exponential Backoff + Jitter + Deadline
 
 路径：`retry-backoff-deadline/`
@@ -19,7 +33,7 @@
 - Retry Amplification
 - 为什么必须明确 Retry Ownership
 
-下一步主题是 **Idempotency（幂等）**，因为只有重复执行不会产生额外副作用时，重试才真正安全。
+Retry 和 Idempotency 应该一起设计：Retry 决定“何时再次尝试”，Idempotency 保证“再次尝试不会制造新的业务副作用”。
 
 ---
 
@@ -28,6 +42,20 @@
 Small system-design experiments for idempotency, retries, rate limiting, circuit breaking, routing, and aggregation.
 
 ### Labs
+
+#### Idempotency
+
+Path: `idempotency/`
+
+Focus:
+
+- idempotency keys
+- request fingerprints
+- PROCESSING / SUCCESS state
+- safe retry after a lost response
+- concurrent duplicate requests
+- same-key / different-payload conflicts
+- why idempotency is not the same as exactly-once delivery
 
 #### Retry + Exponential Backoff + Jitter + Deadline
 
@@ -42,4 +70,4 @@ Focus:
 - retry amplification
 - why retry ownership must be explicit
 
-The next natural topic is **idempotency**, because retries are only safe when repeated execution cannot create duplicate side effects.
+Retry and idempotency should be designed together: retry decides when to attempt again, while idempotency prevents duplicate business side effects.
