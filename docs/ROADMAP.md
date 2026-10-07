@@ -6,6 +6,7 @@
 - [x] Establish the new `labs/` structure
 - [x] CompletableFuture parallel quote aggregation
 - [x] ThreadPoolExecutor sizing and rejection behavior
+- [x] CPU-bound vs I/O-bound thread-pool sizing experiment
 - [ ] CompletableFuture exception and cancellation behavior
 - [ ] Virtual threads comparison
 
