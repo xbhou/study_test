@@ -26,3 +26,14 @@ Focus:
 - task admission order
 - saturation
 - rejection behavior
+
+### Thread Pool Sizing
+
+Path: `thread-pool-sizing/`
+
+Focus:
+
+- CPU-bound vs I/O-bound workloads
+- throughput measurement
+- diminishing returns after CPU saturation
+- why production sizing needs measurement instead of a magic formula

@@ -45,6 +45,14 @@ labs/concurrency/thread-pool-behavior
 
 Demonstrates core threads, bounded queues, maximum pool growth, saturation, and rejection behavior.
 
+### Thread Pool Sizing
+
+```text
+labs/concurrency/thread-pool-sizing
+```
+
+Compares CPU-bound and I/O-bound workloads across several pool sizes and shows why thread counts should be measured rather than chosen from a single formula.
+
 ## Existing Topics
 
 The legacy `src/` tree contains experiments covering:
