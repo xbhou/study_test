@@ -1,55 +1,59 @@
-# Java Lab Roadmap
+# Java Lab 学习路线 / Java Lab Roadmap
 
-> Open-source source-reading plan: [OPEN_SOURCE_LEARNING_PATH.md](./OPEN_SOURCE_LEARNING_PATH.md)
+> 开源源码学习计划 / Open-source source-reading plan: [OPEN_SOURCE_LEARNING_PATH.md](./OPEN_SOURCE_LEARNING_PATH.md)
 >
-> Current recommended starting point: **Caffeine → Resilience4j → Nacos → gRPC Java**.
+> 当前推荐起点 / Current recommended starting point: **Caffeine → Resilience4j → Nacos → gRPC Java**
 
-## Phase 1 — Java & Concurrency
+## 阶段 1 — Java 与并发 / Phase 1 — Java & Concurrency
 
-- [x] Preserve and clean legacy Java experiments
-- [x] Establish the new `labs/` structure
-- [x] CompletableFuture parallel quote aggregation
-- [x] ThreadPoolExecutor sizing and rejection behavior
-- [x] CPU-bound vs I/O-bound thread-pool sizing experiment
-- [x] CompletableFuture exception, deadline, and cancellation behavior
-- [ ] Virtual threads comparison
+- [x] 保留并清理旧的 Java 实验 / Preserve and clean legacy Java experiments
+- [x] 建立新的 `labs/` 结构 / Establish the new `labs/` structure
+- [x] CompletableFuture 并行报价聚合 / CompletableFuture parallel quote aggregation
+- [x] ThreadPoolExecutor 线程池大小与拒绝策略 / ThreadPoolExecutor sizing and rejection behavior
+- [x] CPU 密集型 vs I/O 密集型线程池实验 / CPU-bound vs I/O-bound thread-pool sizing experiment
+- [x] CompletableFuture 异常、截止时间与取消行为 / CompletableFuture exception, deadline, and cancellation behavior
+- [ ] 虚拟线程对比实验 / Virtual threads comparison
 
-## Phase 2 — JVM
+## 阶段 2 — JVM / Phase 2 — JVM
 
-- [ ] Class loading lifecycle
-- [ ] Heap / stack / metaspace experiments
-- [ ] GC observation with JDK tools
-- [ ] Thread dump analysis
+- [ ] 类加载生命周期 / Class loading lifecycle
+- [ ] 堆、栈、元空间实验 / Heap / stack / metaspace experiments
+- [ ] 使用 JDK 工具观察 GC / GC observation with JDK tools
+- [ ] 线程转储分析 / Thread dump analysis
 
-## Phase 3 — Spring
+## 阶段 3 — Spring / Phase 3 — Spring
 
-- [ ] Bean lifecycle
+- [ ] Bean 生命周期 / Bean lifecycle
 - [ ] AOP
-- [ ] Transaction propagation
-- [ ] Spring Boot auto-configuration
+- [ ] 事务传播机制 / Transaction propagation
+- [ ] Spring Boot 自动配置 / Spring Boot auto-configuration
 
-## Phase 4 — Backend Infrastructure
+## 阶段 4 — 后端基础设施 / Phase 4 — Backend Infrastructure
 
-- [ ] MySQL index experiments
-- [ ] Redis cache patterns
-- [ ] Kafka consumer lag and retry
-- [ ] gRPC timeout and retry
+- [ ] MySQL 索引实验 / MySQL index experiments
+- [ ] Redis 缓存模式 / Redis cache patterns
+- [ ] Kafka Consumer Lag 与重试 / Kafka consumer lag and retry
+- [ ] gRPC 超时与重试 / gRPC timeout and retry
 
-## Phase 5 — Distributed Systems
+## 阶段 5 — 分布式系统 / Phase 5 — Distributed Systems
 
-- [ ] Idempotency
-- [x] Retry, exponential backoff, jitter, and deadline budget
-- [ ] Distributed lock
-- [ ] Rate limiting
-- [ ] Circuit breaker
-- [ ] Multi-provider routing and aggregation
+- [ ] 幂等 / Idempotency
+- [x] 重试、指数退避、抖动与 Deadline Budget / Retry, exponential backoff, jitter, and deadline budget
+- [ ] 分布式锁 / Distributed lock
+- [ ] 限流 / Rate limiting
+- [ ] 熔断 / Circuit breaker
+- [ ] 多提供方路由与聚合 / Multi-provider routing and aggregation
 
-## Working Method
+## 学习方法 / Working Method
 
-For every topic:
+每个主题都遵循以下步骤 / For every topic:
 
-1. Define the question.
-2. Build the smallest runnable experiment.
-3. Observe behavior.
-4. Explain why it happens.
-5. Record trade-offs and failure cases.
+1. 明确问题 / Define the question.
+2. 构建最小可运行实验 / Build the smallest runnable experiment.
+3. 观察行为 / Observe behavior.
+4. 解释为什么会这样 / Explain why it happens.
+5. 记录权衡、边界和失败场景 / Record trade-offs and failure cases.
+
+> 默认文档规范：中文 + English 双语。详细规则见根目录 `AGENTS.md`。
+>
+> Default documentation convention: bilingual Chinese + English. See root `AGENTS.md` for details.
