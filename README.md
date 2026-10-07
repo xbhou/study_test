@@ -69,6 +69,14 @@ labs/distributed-system/retry-backoff-deadline
 
 演示可重试异常分类、指数退避、Jitter、Deadline Budget，以及多层重试造成的流量放大风险。
 
+#### Idempotency / 幂等
+
+```text
+labs/distributed-system/idempotency
+```
+
+演示 Idempotency Key、Request Fingerprint、处理中状态、成功结果复用、并发重复请求，以及同 Key 不同参数的冲突处理。
+
 ### 历史代码
 
 根目录的 `src/` 保留了早期学习实验，例如：
@@ -166,6 +174,14 @@ labs/distributed-system/retry-backoff-deadline
 ```
 
 Demonstrates retry classification, exponential backoff, jitter, deadline budgeting, and retry amplification risks.
+
+#### Idempotency
+
+```text
+labs/distributed-system/idempotency
+```
+
+Demonstrates idempotency keys, request fingerprints, processing state, cached-success replay, concurrent duplicate requests, and same-key / different-payload conflict handling.
 
 ### Legacy Topics
 

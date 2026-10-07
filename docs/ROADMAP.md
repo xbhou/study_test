@@ -37,7 +37,7 @@
 
 ## 阶段 5 — 分布式系统 / Phase 5 — Distributed Systems
 
-- [ ] 幂等 / Idempotency
+- [x] 幂等 / Idempotency
 - [x] 重试、指数退避、抖动与 Deadline Budget / Retry, exponential backoff, jitter, and deadline budget
 - [ ] 分布式锁 / Distributed lock
 - [ ] 限流 / Rate limiting
