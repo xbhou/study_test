@@ -1,5 +1,9 @@
 # Java Lab Roadmap
 
+> Open-source source-reading plan: [OPEN_SOURCE_LEARNING_PATH.md](./OPEN_SOURCE_LEARNING_PATH.md)
+>
+> Current recommended starting point: **Caffeine → Resilience4j → Nacos → gRPC Java**.
+
 ## Phase 1 — Java & Concurrency
 
 - [x] Preserve and clean legacy Java experiments
