@@ -54,10 +54,17 @@ Provider C intentionally exceeds the timeout and should not prevent the other pr
 
 The important design idea is that one provider failure should degrade the candidate set, not fail the whole aggregation request.
 
-## Next Experiments
+## Follow-up Lab
+
+See `../completable-future-deadline/` for the next step:
 
 - overall request deadline
-- cancellation
+- failure isolation
+- partial results
+- cancellation semantics
+
+## Future Experiments
+
 - retry with backoff
 - provider health score
 - dynamic routing
