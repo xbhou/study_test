@@ -3,7 +3,9 @@ package dev.xbhou.javalab.quote;
 import java.math.BigDecimal;
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class App {
 
@@ -14,7 +16,8 @@ public class App {
                 new SimulatedQuoteProvider("Provider-C", new BigDecimal("99.50"), 600)
         );
 
-        try (var executor = Executors.newFixedThreadPool(providers.size())) {
+        ExecutorService executor = Executors.newFixedThreadPool(providers.size());
+        try {
             QuoteAggregator aggregator =
                     new QuoteAggregator(providers, executor, Duration.ofMillis(300));
 
@@ -23,6 +26,16 @@ public class App {
                             quote -> System.out.println("Best quote: " + quote),
                             () -> System.out.println("No valid quote")
                     );
+        } finally {
+            executor.shutdown();
+            try {
+                if (!executor.awaitTermination(1, TimeUnit.SECONDS)) {
+                    executor.shutdownNow();
+                }
+            } catch (InterruptedException e) {
+                executor.shutdownNow();
+                Thread.currentThread().interrupt();
+            }
         }
     }
 }
