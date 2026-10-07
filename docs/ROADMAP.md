@@ -5,7 +5,7 @@
 - [x] Preserve and clean legacy Java experiments
 - [x] Establish the new `labs/` structure
 - [x] CompletableFuture parallel quote aggregation
-- [ ] ThreadPoolExecutor sizing and rejection policies
+- [x] ThreadPoolExecutor sizing and rejection behavior
 - [ ] CompletableFuture exception and cancellation behavior
 - [ ] Virtual threads comparison
 
