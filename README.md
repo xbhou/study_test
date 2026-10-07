@@ -1,44 +1,74 @@
 # Java Lab
 
-A long-running Java learning and experiment repository.
+A personal Java engineering lab for small, runnable experiments and backend system design practice.
 
-This repository collects small, runnable examples used to understand Java fundamentals, algorithms, concurrency, JVM behavior, and backend engineering concepts.
+## What this repository is for
 
-## Current Topics
+This repository turns technical questions into executable experiments.
 
-- Algorithms
-  - Sorting
-  - Dynamic programming
-- Java Core
-  - Reflection
-  - Class loading
-  - Singleton patterns
-  - Date and time APIs
-- Concurrency
-  - Threads
-  - synchronized
-  - volatile
-  - Thread pools
+The goal is not to collect snippets. Each new lab should answer a concrete question, be easy to run, and document what was learned.
 
-## Planned Topics
+## Repository Structure
 
-- CompletableFuture and asynchronous programming
-- JVM and performance diagnostics
-- Spring Boot
-- MySQL
-- Redis
-- Kafka
-- gRPC
-- Distributed systems
+```text
+java-lab
+├── src/                         # Legacy Java study experiments
+├── labs/                        # New standalone experiments
+│   ├── java-core/
+│   ├── concurrency/
+│   ├── jvm/
+│   ├── spring/
+│   ├── mysql/
+│   ├── redis/
+│   ├── kafka/
+│   ├── grpc/
+│   └── distributed-system/
+└── docs/
+    └── ROADMAP.md
+```
 
-## Repository Principles
+## First Modern Lab
 
-1. Prefer small runnable examples over copied notes.
-2. Each experiment should answer one concrete technical question.
-3. Add tests where they help explain expected behavior.
-4. Keep IDE-specific files and generated artifacts out of version control.
-5. Document the problem, implementation, observations, and conclusions.
+### CompletableFuture Quote Aggregator
+
+Location:
+
+```text
+labs/concurrency/completable-future-quote
+```
+
+It demonstrates:
+
+- concurrent provider requests
+- per-provider timeout handling
+- failed result isolation
+- result aggregation
+- best-quote selection
+
+## Existing Topics
+
+The legacy `src/` tree contains experiments covering:
+
+- algorithms
+- reflection
+- class loading
+- singleton patterns
+- synchronized / volatile
+- thread pools
+- date and time APIs
+- JavaScript engine experiments
+
+These examples are kept as historical learning assets and will be cleaned up gradually instead of being moved all at once.
+
+## Lab Rules
+
+1. One lab, one concrete technical question.
+2. Prefer runnable examples over copied notes.
+3. Keep each lab small enough to understand independently.
+4. Include a short README with problem, design, run steps, and observations.
+5. Add tests when behavior is important.
+6. Never commit company code, credentials, internal endpoints, or production data.
 
 ## Roadmap
 
-This repository is being reorganized into a personal Java engineering lab. Existing examples will be gradually grouped by topic and improved with clearer documentation and tests.
+See [docs/ROADMAP.md](docs/ROADMAP.md).
