@@ -37,6 +37,14 @@ labs/concurrency/completable-future-quote
 
 Demonstrates concurrent provider requests, timeout isolation, result aggregation, and best-quote selection.
 
+### CompletableFuture Deadline & Cancellation
+
+```text
+labs/concurrency/completable-future-deadline
+```
+
+Demonstrates end-to-end deadlines, failure isolation, partial results, and the difference between cancelling a future and actually stopping the underlying work.
+
 ### ThreadPoolExecutor Behavior
 
 ```text
