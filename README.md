@@ -27,23 +27,23 @@ java-lab
     └── ROADMAP.md
 ```
 
-## First Modern Lab
+## Modern Labs
 
 ### CompletableFuture Quote Aggregator
-
-Location:
 
 ```text
 labs/concurrency/completable-future-quote
 ```
 
-It demonstrates:
+Demonstrates concurrent provider requests, timeout isolation, result aggregation, and best-quote selection.
 
-- concurrent provider requests
-- per-provider timeout handling
-- failed result isolation
-- result aggregation
-- best-quote selection
+### ThreadPoolExecutor Behavior
+
+```text
+labs/concurrency/thread-pool-behavior
+```
+
+Demonstrates core threads, bounded queues, maximum pool growth, saturation, and rejection behavior.
 
 ## Existing Topics
 
