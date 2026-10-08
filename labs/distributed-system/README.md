@@ -63,6 +63,21 @@
 - Failure Classification
 - 与 Retry、Rate Limiting、Bulkhead 的区别
 
+#### 多 Provider 路由与聚合 / Multi-provider Routing & Aggregation
+
+路径：`multi-provider-routing/`
+
+重点：
+
+- Dynamic Routing
+- Symbol / Scene / Priority
+- Parallel Provider Calls
+- Per-provider Timeout
+- Overall Deadline
+- Circuit Breaker
+- Partial Result
+- Best Quote Selection
+
 #### Retry + Exponential Backoff + Jitter + Deadline
 
 路径：`retry-backoff-deadline/`
@@ -142,6 +157,21 @@ Focus:
 - half-open probes
 - failure classification
 - differences from retry, rate limiting, and bulkheads
+
+#### Multi-provider Routing & Aggregation / 多 Provider 路由与聚合
+
+Path: `multi-provider-routing/`
+
+Focus:
+
+- dynamic routing
+- symbol / scene / priority
+- parallel provider calls
+- per-provider timeout
+- overall deadline
+- circuit breaker isolation
+- partial results
+- best quote selection
 
 #### Retry + Exponential Backoff + Jitter + Deadline
 
