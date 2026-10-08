@@ -20,9 +20,23 @@ JVM 实验目录，重点通过可运行代码和 JDK 工具理解运行时行�
 - 父类 / 子类初始化顺序
 - JDK 17 `-Xlog:class+load,class+init`
 
+#### JVM 内存区域 / JVM Memory Regions
+
+路径：`memory-regions/`
+
+重点：
+
+- Heap / Thread Stack / Metaspace
+- `-Xss`
+- `-Xms` / `-Xmx`
+- `-XX:MaxMetaspaceSize`
+- `StackOverflowError`
+- `OutOfMemoryError: Java heap space`
+- `OutOfMemoryError: Metaspace`
+- ClassLoader Leak 与进程总内存
+
 后续覆盖：
 
-- Heap / Stack / Metaspace
 - GC 行为
 - Thread Dump
 - JVM 诊断与性能分析
@@ -49,9 +63,23 @@ Focus:
 - parent / child initialization order
 - JDK 17 `-Xlog:class+load,class+init`
 
+#### JVM Memory Regions / JVM 内存区域
+
+Path: `memory-regions/`
+
+Focus:
+
+- heap / thread stack / metaspace
+- `-Xss`
+- `-Xms` / `-Xmx`
+- `-XX:MaxMetaspaceSize`
+- `StackOverflowError`
+- `OutOfMemoryError: Java heap space`
+- `OutOfMemoryError: Metaspace`
+- class-loader leaks and total process memory
+
 Planned next topics:
 
-- heap / stack / metaspace
 - garbage collection
 - thread dumps
 - JVM diagnostics and performance behavior
