@@ -49,10 +49,22 @@ JVM 实验目录，重点通过可运行代码和 JDK 工具理解运行时行�
 - JDK Unified Logging `-Xlog:gc*`
 - SerialGC 与 G1 日志对比
 
-后续覆盖：
+#### 线程转储分析 / Thread Dump Analysis
 
-- Thread Dump
-- JVM 诊断与性能分析
+路径：`thread-dump-analysis/`
+
+重点：
+
+- RUNNABLE / BLOCKED / WAITING / TIMED_WAITING
+- Monitor Owner / Waiter
+- Java-level Deadlock
+- Thread Pool Saturation
+- `jcmd Thread.print -l`
+- `jstack -l`
+- 连续多份 Thread Dump 对比
+- JVM 线上线程故障排查
+
+Phase 2 基础 JVM 路线到这里完成。
 
 ---
 
@@ -105,7 +117,19 @@ Focus:
 - JDK unified logging with `-Xlog:gc*`
 - SerialGC vs G1 log comparison
 
-Planned next topics:
+#### Thread Dump Analysis / 线程转储分析
 
-- thread dumps
-- JVM diagnostics and performance behavior
+Path: `thread-dump-analysis/`
+
+Focus:
+
+- RUNNABLE / BLOCKED / WAITING / TIMED_WAITING
+- monitor ownership and waiters
+- Java-level deadlocks
+- thread-pool saturation
+- `jcmd Thread.print -l`
+- `jstack -l`
+- comparing multiple thread dumps
+- practical JVM thread troubleshooting
+
+The foundational Phase 2 JVM track is complete.
