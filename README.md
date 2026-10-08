@@ -109,6 +109,14 @@ labs/distributed-system/multi-provider-routing
 
 综合演示动态路由、并行 Provider 调用、单 Provider Timeout、Overall Deadline、Circuit Breaker、Partial Result 和 Best Quote Selection。
 
+#### JVM 类加载生命周期 / JVM Class Loading Lifecycle
+
+```text
+labs/jvm/class-loading-lifecycle
+```
+
+通过编译期常量、普通 static 字段、`ClassLoader.loadClass`、`Class.forName` 和父子类初始化顺序，观察 Loading、Linking 与 Initialization 的区别。
+
 ### 历史代码
 
 根目录的 `src/` 保留了早期学习实验，例如：
@@ -246,6 +254,14 @@ labs/distributed-system/multi-provider-routing
 ```
 
 Combines dynamic routing, parallel provider calls, provider timeouts, overall deadlines, circuit breaking, partial results, and best-quote selection.
+
+#### JVM Class Loading Lifecycle
+
+```text
+labs/jvm/class-loading-lifecycle
+```
+
+Explores loading, linking, and initialization through compile-time constants, static fields, `ClassLoader.loadClass`, `Class.forName`, and parent/child initialization order.
 
 ### Legacy Topics
 
