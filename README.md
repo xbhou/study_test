@@ -101,6 +101,14 @@ labs/distributed-system/circuit-breaker
 
 演示 CLOSED → OPEN → HALF_OPEN 状态机、Fail Fast、恢复探测，以及熔断器与 Retry、Rate Limiting 的职责边界。
 
+#### Multi-provider Routing & Aggregation / 多 Provider 路由与聚合
+
+```text
+labs/distributed-system/multi-provider-routing
+```
+
+综合演示动态路由、并行 Provider 调用、单 Provider Timeout、Overall Deadline、Circuit Breaker、Partial Result 和 Best Quote Selection。
+
 ### 历史代码
 
 根目录的 `src/` 保留了早期学习实验，例如：
@@ -230,6 +238,14 @@ labs/distributed-system/circuit-breaker
 ```
 
 Demonstrates CLOSED → OPEN → HALF_OPEN transitions, fail-fast behavior, recovery probes, and how circuit breaking differs from retry and rate limiting.
+
+#### Multi-provider Routing & Aggregation
+
+```text
+labs/distributed-system/multi-provider-routing
+```
+
+Combines dynamic routing, parallel provider calls, provider timeouts, overall deadlines, circuit breaking, partial results, and best-quote selection.
 
 ### Legacy Topics
 
