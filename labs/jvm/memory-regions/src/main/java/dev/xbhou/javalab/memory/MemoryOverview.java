@@ -53,17 +53,17 @@ public class MemoryOverview {
     }
 
     private static void printUsage(MemoryUsage usage) {
-        System.out.println("used=" + toMiB(usage.getUsed()) + " MiB");
-        System.out.println("committed=" + toMiB(usage.getCommitted()) + " MiB");
-        System.out.println(
-                "max="
-                        + (usage.getMax() < 0
-                        ? "undefined"
-                        : toMiB(usage.getMax()) + " MiB")
-        );
+        System.out.printf("used=%.2f MiB%n", toMiB(usage.getUsed()));
+        System.out.printf("committed=%.2f MiB%n", toMiB(usage.getCommitted()));
+
+        if (usage.getMax() < 0) {
+            System.out.println("max=undefined");
+        } else {
+            System.out.printf("max=%.2f MiB%n", toMiB(usage.getMax()));
+        }
     }
 
-    private static long toMiB(long bytes) {
-        return bytes / 1024 / 1024;
+    private static double toMiB(long bytes) {
+        return bytes / 1024.0 / 1024.0;
     }
 }
