@@ -20,6 +20,21 @@
 - 同 Key 不同参数冲突
 - 为什么 Idempotency 不等于 Exactly Once
 
+#### 分布式锁 / Distributed Lock
+
+路径：`distributed-lock/`
+
+重点：
+
+- Lease Lock
+- Owner Token
+- Safe Unlock
+- Lease Renewal / Watchdog
+- Lock Expiry
+- Stale Owner
+- Fencing Token
+- 为什么 Distributed Lock 不等于 Exactly Once
+
 #### Retry + Exponential Backoff + Jitter + Deadline
 
 路径：`retry-backoff-deadline/`
@@ -56,6 +71,21 @@ Focus:
 - concurrent duplicate requests
 - same-key / different-payload conflicts
 - why idempotency is not the same as exactly-once delivery
+
+#### Distributed Lock / 分布式锁
+
+Path: `distributed-lock/`
+
+Focus:
+
+- lease-based locking
+- owner tokens
+- safe unlock
+- lease renewal / watchdog
+- lock expiry
+- stale owners
+- fencing tokens
+- why distributed locking is not exactly-once delivery
 
 #### Retry + Exponential Backoff + Jitter + Deadline
 
