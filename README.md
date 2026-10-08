@@ -117,6 +117,14 @@ labs/jvm/class-loading-lifecycle
 
 通过编译期常量、普通 static 字段、`ClassLoader.loadClass`、`Class.forName` 和父子类初始化顺序，观察 Loading、Linking 与 Initialization 的区别。
 
+#### JVM 内存区域 / JVM Memory Regions
+
+```text
+labs/jvm/memory-regions
+```
+
+通过受控 JVM 参数分别观察 Heap、Thread Stack 和 Metaspace，并区分 `StackOverflowError`、Heap OOM 与 Metaspace OOM。
+
 ### 历史代码
 
 根目录的 `src/` 保留了早期学习实验，例如：
@@ -262,6 +270,14 @@ labs/jvm/class-loading-lifecycle
 ```
 
 Explores loading, linking, and initialization through compile-time constants, static fields, `ClassLoader.loadClass`, `Class.forName`, and parent/child initialization order.
+
+#### JVM Memory Regions
+
+```text
+labs/jvm/memory-regions
+```
+
+Uses controlled JVM limits to observe Heap, Thread Stack, and Metaspace, and to distinguish stack overflow, heap OOM, and metaspace OOM.
 
 ### Legacy Topics
 
