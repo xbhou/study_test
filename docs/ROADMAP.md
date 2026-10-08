@@ -17,7 +17,7 @@
 ## 阶段 2 — JVM / Phase 2 — JVM
 
 - [x] 类加载生命周期 / Class loading lifecycle
-- [ ] 堆、栈、元空间实验 / Heap / stack / metaspace experiments
+- [x] 堆、栈、元空间实验 / Heap / stack / metaspace experiments
 - [ ] 使用 JDK 工具观察 GC / GC observation with JDK tools
 - [ ] 线程转储分析 / Thread dump analysis
 
