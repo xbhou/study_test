@@ -85,6 +85,14 @@ labs/distributed-system/distributed-lock
 
 演示 Lease、Owner Token、安全释放、续租、锁过期以及 Fencing Token 如何防止 stale owner 写入下游资源。
 
+#### Rate Limiting / 限流
+
+```text
+labs/distributed-system/rate-limiting
+```
+
+对比 Fixed Window、Sliding Window Log 和 Token Bucket，重点观察窗口边界突发、平滑限流和受控 Burst。
+
 ### 历史代码
 
 根目录的 `src/` 保留了早期学习实验，例如：
@@ -198,6 +206,14 @@ labs/distributed-system/distributed-lock
 ```
 
 Demonstrates lease-based locking, owner-checked release, renewal, lock expiry, stale-owner risks, and fencing tokens that protect downstream resources.
+
+#### Rate Limiting
+
+```text
+labs/distributed-system/rate-limiting
+```
+
+Compares Fixed Window, Sliding Window Log, and Token Bucket behavior, including boundary bursts and controlled burst capacity.
 
 ### Legacy Topics
 
