@@ -77,6 +77,14 @@ labs/distributed-system/idempotency
 
 演示 Idempotency Key、Request Fingerprint、处理中状态、成功结果复用、并发重复请求，以及同 Key 不同参数的冲突处理。
 
+#### Distributed Lock / 分布式锁
+
+```text
+labs/distributed-system/distributed-lock
+```
+
+演示 Lease、Owner Token、安全释放、续租、锁过期以及 Fencing Token 如何防止 stale owner 写入下游资源。
+
 ### 历史代码
 
 根目录的 `src/` 保留了早期学习实验，例如：
@@ -182,6 +190,14 @@ labs/distributed-system/idempotency
 ```
 
 Demonstrates idempotency keys, request fingerprints, processing state, cached-success replay, concurrent duplicate requests, and same-key / different-payload conflict handling.
+
+#### Distributed Lock
+
+```text
+labs/distributed-system/distributed-lock
+```
+
+Demonstrates lease-based locking, owner-checked release, renewal, lock expiry, stale-owner risks, and fencing tokens that protect downstream resources.
 
 ### Legacy Topics
 
