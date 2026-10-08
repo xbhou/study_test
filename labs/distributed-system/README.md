@@ -35,6 +35,20 @@
 - Fencing Token
 - 为什么 Distributed Lock 不等于 Exactly Once
 
+#### 限流 / Rate Limiting
+
+路径：`rate-limiting/`
+
+重点：
+
+- Fixed Window
+- Sliding Window Log
+- Token Bucket
+- Window Boundary Burst
+- Controlled Burst
+- 全局限流与单机限流的区别
+- Redis / Gateway 分布式实现考虑
+
 #### Retry + Exponential Backoff + Jitter + Deadline
 
 路径：`retry-backoff-deadline/`
@@ -86,6 +100,20 @@ Focus:
 - stale owners
 - fencing tokens
 - why distributed locking is not exactly-once delivery
+
+#### Rate Limiting / 限流
+
+Path: `rate-limiting/`
+
+Focus:
+
+- fixed window
+- sliding window log
+- token bucket
+- boundary bursts
+- controlled bursts
+- per-instance vs global limits
+- Redis / gateway implementation considerations
 
 #### Retry + Exponential Backoff + Jitter + Deadline
 
