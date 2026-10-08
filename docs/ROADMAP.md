@@ -42,7 +42,7 @@
 - [x] 分布式锁 / Distributed lock
 - [x] 限流 / Rate limiting
 - [x] 熔断 / Circuit breaker
-- [ ] 多提供方路由与聚合 / Multi-provider routing and aggregation
+- [x] 多提供方路由与聚合 / Multi-provider routing and aggregation
 
 ## 学习方法 / Working Method
 
