@@ -133,6 +133,14 @@ labs/jvm/gc-observation
 
 通过受控对象分配和 JDK Unified Logging 观察 Young GC、Survivor Age、Promotion、Old Generation 增长和 Full GC，并对比 SerialGC 与 G1 日志。
 
+#### Thread Dump Analysis / 线程转储分析
+
+```text
+labs/jvm/thread-dump-analysis
+```
+
+通过实际制造 RUNNABLE、BLOCKED、WAITING、TIMED_WAITING、Deadlock 和线程池 Queue Backlog，练习使用 `jcmd Thread.print` / `jstack` 进行 JVM 线程故障排查。
+
 ### 历史代码
 
 根目录的 `src/` 保留了早期学习实验，例如：
@@ -294,6 +302,14 @@ labs/jvm/gc-observation
 ```
 
 Uses controlled allocation pressure and JDK unified GC logging to observe young collections, survivor aging, promotion, old-generation growth, full collections, and SerialGC vs G1 behavior.
+
+#### Thread Dump Analysis
+
+```text
+labs/jvm/thread-dump-analysis
+```
+
+Creates RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, deadlock, and thread-pool backlog scenarios, then diagnoses them with `jcmd Thread.print` and `jstack`.
 
 ### Legacy Topics
 
