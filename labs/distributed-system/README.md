@@ -49,6 +49,20 @@
 - 全局限流与单机限流的区别
 - Redis / Gateway 分布式实现考虑
 
+#### 熔断 / Circuit Breaker
+
+路径：`circuit-breaker/`
+
+重点：
+
+- CLOSED / OPEN / HALF_OPEN 状态机
+- Failure Threshold
+- Fail Fast
+- OPEN Duration
+- HALF_OPEN Probe
+- Failure Classification
+- 与 Retry、Rate Limiting、Bulkhead 的区别
+
 #### Retry + Exponential Backoff + Jitter + Deadline
 
 路径：`retry-backoff-deadline/`
@@ -114,6 +128,20 @@ Focus:
 - controlled bursts
 - per-instance vs global limits
 - Redis / gateway implementation considerations
+
+#### Circuit Breaker / 熔断
+
+Path: `circuit-breaker/`
+
+Focus:
+
+- CLOSED / OPEN / HALF_OPEN state machine
+- failure thresholds
+- fail-fast behavior
+- open duration
+- half-open probes
+- failure classification
+- differences from retry, rate limiting, and bulkheads
 
 #### Retry + Exponential Backoff + Jitter + Deadline
 

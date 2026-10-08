@@ -41,7 +41,7 @@
 - [x] 重试、指数退避、抖动与 Deadline Budget / Retry, exponential backoff, jitter, and deadline budget
 - [x] 分布式锁 / Distributed lock
 - [x] 限流 / Rate limiting
-- [ ] 熔断 / Circuit breaker
+- [x] 熔断 / Circuit breaker
 - [ ] 多提供方路由与聚合 / Multi-provider routing and aggregation
 
 ## 学习方法 / Working Method

@@ -93,6 +93,14 @@ labs/distributed-system/rate-limiting
 
 对比 Fixed Window、Sliding Window Log 和 Token Bucket，重点观察窗口边界突发、平滑限流和受控 Burst。
 
+#### Circuit Breaker / 熔断
+
+```text
+labs/distributed-system/circuit-breaker
+```
+
+演示 CLOSED → OPEN → HALF_OPEN 状态机、Fail Fast、恢复探测，以及熔断器与 Retry、Rate Limiting 的职责边界。
+
 ### 历史代码
 
 根目录的 `src/` 保留了早期学习实验，例如：
@@ -214,6 +222,14 @@ labs/distributed-system/rate-limiting
 ```
 
 Compares Fixed Window, Sliding Window Log, and Token Bucket behavior, including boundary bursts and controlled burst capacity.
+
+#### Circuit Breaker
+
+```text
+labs/distributed-system/circuit-breaker
+```
+
+Demonstrates CLOSED → OPEN → HALF_OPEN transitions, fail-fast behavior, recovery probes, and how circuit breaking differs from retry and rate limiting.
 
 ### Legacy Topics
 
