@@ -35,9 +35,22 @@ JVM 实验目录，重点通过可运行代码和 JDK 工具理解运行时行�
 - `OutOfMemoryError: Metaspace`
 - ClassLoader Leak 与进程总内存
 
+#### GC 观察 / GC Observation
+
+路径：`gc-observation/`
+
+重点：
+
+- Young GC
+- Eden / Survivor / Tenured
+- Object Age / Tenuring Threshold
+- Promotion
+- Full GC
+- JDK Unified Logging `-Xlog:gc*`
+- SerialGC 与 G1 日志对比
+
 后续覆盖：
 
-- GC 行为
 - Thread Dump
 - JVM 诊断与性能分析
 
@@ -78,8 +91,21 @@ Focus:
 - `OutOfMemoryError: Metaspace`
 - class-loader leaks and total process memory
 
+#### GC Observation / GC 观察
+
+Path: `gc-observation/`
+
+Focus:
+
+- young collections
+- Eden / Survivor / Tenured
+- object age / tenuring threshold
+- promotion
+- full collections
+- JDK unified logging with `-Xlog:gc*`
+- SerialGC vs G1 log comparison
+
 Planned next topics:
 
-- garbage collection
 - thread dumps
 - JVM diagnostics and performance behavior

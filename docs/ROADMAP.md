@@ -18,7 +18,7 @@
 
 - [x] 类加载生命周期 / Class loading lifecycle
 - [x] 堆、栈、元空间实验 / Heap / stack / metaspace experiments
-- [ ] 使用 JDK 工具观察 GC / GC observation with JDK tools
+- [x] 使用 JDK 工具观察 GC / GC observation with JDK tools
 - [ ] 线程转储分析 / Thread dump analysis
 
 ## 阶段 3 — Spring / Phase 3 — Spring

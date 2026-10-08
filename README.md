@@ -125,6 +125,14 @@ labs/jvm/memory-regions
 
 通过受控 JVM 参数分别观察 Heap、Thread Stack 和 Metaspace，并区分 `StackOverflowError`、Heap OOM 与 Metaspace OOM。
 
+#### GC 观察 / GC Observation
+
+```text
+labs/jvm/gc-observation
+```
+
+通过受控对象分配和 JDK Unified Logging 观察 Young GC、Survivor Age、Promotion、Old Generation 增长和 Full GC，并对比 SerialGC 与 G1 日志。
+
 ### 历史代码
 
 根目录的 `src/` 保留了早期学习实验，例如：
@@ -278,6 +286,14 @@ labs/jvm/memory-regions
 ```
 
 Uses controlled JVM limits to observe Heap, Thread Stack, and Metaspace, and to distinguish stack overflow, heap OOM, and metaspace OOM.
+
+#### GC Observation
+
+```text
+labs/jvm/gc-observation
+```
+
+Uses controlled allocation pressure and JDK unified GC logging to observe young collections, survivor aging, promotion, old-generation growth, full collections, and SerialGC vs G1 behavior.
 
 ### Legacy Topics
 
