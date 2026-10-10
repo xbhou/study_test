@@ -141,6 +141,14 @@ labs/jvm/thread-dump-analysis
 
 通过实际制造 RUNNABLE、BLOCKED、WAITING、TIMED_WAITING、Deadlock 和线程池 Queue Backlog，练习使用 `jcmd Thread.print` / `jstack` 进行 JVM 线程故障排查。
 
+#### Spring Bean 生命周期 / Spring Bean Lifecycle
+
+```text
+labs/spring/bean-lifecycle
+```
+
+观察 Bean 实例化、依赖注入、Aware 回调、BeanPostProcessor、`@PostConstruct`、`InitializingBean`、自定义 init/destroy 与 ApplicationContext 关闭时的完整生命周期。
+
 ### 历史代码
 
 根目录的 `src/` 保留了早期学习实验，例如：
@@ -310,6 +318,14 @@ labs/jvm/thread-dump-analysis
 ```
 
 Creates RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, deadlock, and thread-pool backlog scenarios, then diagnoses them with `jcmd Thread.print` and `jstack`.
+
+#### Spring Bean Lifecycle
+
+```text
+labs/spring/bean-lifecycle
+```
+
+Observes bean instantiation, dependency injection, aware callbacks, BeanPostProcessor hooks, `@PostConstruct`, `InitializingBean`, custom init/destroy methods, and ApplicationContext shutdown.
 
 ### Legacy Topics
 
