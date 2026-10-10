@@ -6,13 +6,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class App {
 
     public static void main(String[] args) {
+        LifecycleEventRecorder recorder = AppConfig.recorder();
+        recorder.reset();
+
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(
                         AppConfig.class
                 );
-
-        LifecycleEventRecorder recorder =
-                context.getBean(LifecycleEventRecorder.class);
 
         LifecycleBean bean =
                 context.getBean(LifecycleBean.class);
