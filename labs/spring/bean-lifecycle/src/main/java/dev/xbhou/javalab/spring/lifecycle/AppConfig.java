@@ -6,16 +6,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    @Bean
-    public LifecycleEventRecorder lifecycleEventRecorder() {
-        return new LifecycleEventRecorder();
+    private static final LifecycleEventRecorder RECORDER =
+            new LifecycleEventRecorder();
+
+    static LifecycleEventRecorder recorder() {
+        return RECORDER;
     }
 
     @Bean
-    public static TrackingBeanPostProcessor trackingBeanPostProcessor(
-            LifecycleEventRecorder recorder
-    ) {
-        return new TrackingBeanPostProcessor(recorder);
+    public static TrackingBeanPostProcessor trackingBeanPostProcessor() {
+        return new TrackingBeanPostProcessor(RECORDER);
     }
 
     @Bean
@@ -27,9 +27,7 @@ public class AppConfig {
             initMethod = "customInit",
             destroyMethod = "customDestroy"
     )
-    public LifecycleBean lifecycleBean(
-            LifecycleEventRecorder recorder
-    ) {
-        return new LifecycleBean(recorder);
+    public LifecycleBean lifecycleBean() {
+        return new LifecycleBean(RECORDER);
     }
 }
