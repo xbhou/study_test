@@ -19,4 +19,9 @@ public class LifecycleEventRecorder {
     public synchronized List<String> snapshot() {
         return List.copyOf(events);
     }
+
+    public synchronized void reset() {
+        events.clear();
+        sequence.set(0);
+    }
 }
