@@ -2,12 +2,31 @@
 
 ## 中文
 
-Spring Core 与 Spring Boot 实验目录。
+Spring Core 与 Spring Boot 实验目录，重点把 IoC、生命周期、代理、事务和自动配置做成可运行实验。
 
-后续重点：
+### Labs
 
-- Bean 生命周期
-- ApplicationContext / BeanFactory
+#### Bean 生命周期 / Bean Lifecycle
+
+路径：`bean-lifecycle/`
+
+重点：
+
+- BeanDefinition → Bean instance
+- Instantiation 与 Dependency Injection
+- BeanNameAware / BeanFactoryAware
+- BeanPostProcessor
+- @PostConstruct
+- InitializingBean.afterPropertiesSet
+- custom initMethod
+- @PreDestroy / DisposableBean / destroyMethod
+- BeanFactory vs ApplicationContext
+- 生命周期顺序自动校验
+
+这个 Lab 从旧 `studyDemo` 的 ApplicationContext、BeanFactory 和 InitializingBean 实验升级而来，但重新拆分了“被管理的 Bean”和“容器扩展点”的角色。
+
+后续覆盖：
+
 - AOP
 - 事务传播
 - Spring Boot Auto Configuration
@@ -16,12 +35,31 @@ Spring Core 与 Spring Boot 实验目录。
 
 ## English
 
-Focused experiments for Spring Core and Spring Boot.
+Focused Spring Core and Spring Boot experiments that make IoC, lifecycle, proxies, transactions, and auto-configuration observable.
 
-Planned topics:
+### Labs
 
-- bean lifecycle
-- ApplicationContext / BeanFactory
+#### Bean Lifecycle / Bean 生命周期
+
+Path: `bean-lifecycle/`
+
+Focus:
+
+- BeanDefinition to bean instance
+- instantiation vs dependency injection
+- BeanNameAware / BeanFactoryAware
+- BeanPostProcessor
+- @PostConstruct
+- InitializingBean.afterPropertiesSet
+- custom init method
+- @PreDestroy / DisposableBean / destroy method
+- BeanFactory vs ApplicationContext
+- runtime lifecycle-order verification
+
+This lab modernizes the legacy studyDemo ApplicationContext, BeanFactory, and InitializingBean experiments while separating managed-bean responsibilities from container extension points.
+
+Planned next topics:
+
 - AOP
 - transaction propagation
 - Spring Boot auto-configuration
